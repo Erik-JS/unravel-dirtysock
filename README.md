@@ -18,4 +18,4 @@ Binary only: [Mediafire](http://www.mediafire.com/download/5yn8vu83ovua72v/dirty
 Rename original 'dirtysock.dll' to 'dirtysock.bak', then put the proxy dll in its place.
 
 This modification is not made or supported by EA or Coldwood Interactive.<br />
-Unravel © 2015 EA International (Studio and Publishing) Ltd.
+Unravel © 2016 Electronic Arts Inc. Unravel is a trademark of Electronic Arts Inc.
