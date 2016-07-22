@@ -3,18 +3,6 @@
 
 UINT64 p[938];
 
-// Returns current executable's path, including "\"
-char *GetExecutableFolder()
-{
-	char buffer[FILENAME_MAX];
-	GetModuleFileName(NULL, buffer, FILENAME_MAX);
-	int x = strlen(buffer) - 1;
-	while (buffer[x] != '\\')
-		x--;
-	buffer[x + 1] = '\0';
-	return buffer;
-}
-
 // --- Load Plugins ---
 void loadPlugins (FILE *Log, char *folder)
 {
@@ -22,8 +10,6 @@ void loadPlugins (FILE *Log, char *folder)
 	WIN32_FIND_DATA fd;
 	char targetfilter[FILENAME_MAX];
 	char currfile[FILENAME_MAX];
-	//char exebasefolder[FILENAME_MAX];
-	//strcpy (exebasefolder, GetExecutableFolder());
 	strcpy (targetfilter, ".\\");
 	strcat (targetfilter, folder);
 	strcat (targetfilter, "\\*.asi");
@@ -42,7 +28,6 @@ void loadPlugins (FILE *Log, char *folder)
 			type |= 0x20202020; // convert letter to lowercase, "\0" to space
 			if (type == typeMask)
 			{
-			    //strcpy (currfile, exebasefolder);
 				strcpy (currfile, ".\\");
 				strcat (currfile, folder);
 				strcat (currfile, "\\");
